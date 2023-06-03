@@ -1,5 +1,7 @@
-import java.util.ArrayList;
 import java.util.List;
+
+import bookstore_pakage.BookStore;
+
 
 class Demo {
   public static void main(String[] args) {
@@ -8,13 +10,16 @@ class Demo {
     Book bookThree = new Book(123, "Php", "James Gosling", 140, 102);
     Book bookFour = new Book(123, "Python", "James Gosling", 90, 310);
 
-    List<Book> books = new ArrayList<>();
+    bookStore bookStore = new BookStore();
 
-    books.add(bookOne);
-    books.add(bookTwo);
-    books.add(bookThree);
-    books.add(bookFour);
 
+    bookStore.addBook(bookOne);
+    bookStore.addBook(bookTwo);
+    bookStore.addBook(bookThree);
+    bookStore.addBook(bookFour);
+
+    List<Book> books = bookStore.getAllBooks();
+    System.out.println("All books in the bookstore");
     books.forEach(book -> System.out.println(book));
   }
 }
