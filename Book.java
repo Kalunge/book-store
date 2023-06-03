@@ -49,10 +49,24 @@ public class Book {
     this.price = price;
   }
 
+  public void setQuantity(int quantity) {
+    this.quantity = quantity;
+  }
+
+  public void setIsbn(int ISBN) {
+    this.ISBN = ISBN;
+  }
+
+  public void setAuthor(String author) {
+    this.author = author;
+  }
+
+  public void setTitle(String title) {
+    this.title = title;
+  }
+
+ 
   
-
-
-
   public String toString() {
     return "ISBN: " + ISBN + ", Title: " + title + ", Author: " + author + ", Price: " + price + ", Quantity: " + quantity;
   }
